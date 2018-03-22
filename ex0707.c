@@ -7,13 +7,13 @@
 int main(){
 	char input;
 	int bit = 0,               //characters
-		num = 0,               //numbers
-		ABC = 0,               //uppercase
-		abc = 0,               //lowercase
-		com = 0,               //punctuation
-		con = 0,               //controls
-		els = 0;               //others
-	do{                                 //from line 16~28 each input will be sort out
+	    num = 0,               //numbers
+	    ABC = 0,               //uppercase
+	    abc = 0,               //lowercase
+	    com = 0,               //punctuation
+	    con = 0,               //controls
+	    els = 0;               //others
+	do{                               //from line 16~28 each input will be sort out
 		printf("input a test bit:");  //use is___() function to determine which variable it should be
 		input = getche();
 		if(input == 27)break;           //break when input get escape key
@@ -26,7 +26,7 @@ int main(){
 		bit++;                          //after finishing all determination, go to next bit
 		printf("\n");
 	}while(1);
-	printf("\n");                       //|�ááááááááááá�|
+	printf("\n");                       //|�áááááááááááá�|
 	printf("numbers:%d\n", num);        //|                        |
 	printf("uppercase:%d\n", ABC);      //|         output         |
 	printf("lowercase:%d\n", abc);      //|          for           |
