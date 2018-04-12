@@ -33,7 +33,7 @@ int main(){
 			for(j = 0; j < 3; j++){
 				sum += lifeCycle[j];
 			}
-			printf("%d %d %d ", first, month, sum);
+			printf("%d %d %d\n", first, month, sum);
 //		}
 //		printf("\n");
 //	}
