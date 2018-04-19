@@ -6,7 +6,7 @@ const int adjust[6] = {0, 0, 25900, 105100, 283300, 655300};        //define adj
 const float rate[6] = {0, 0.06, 0.13, 0.21, 0.3, 0.4};              //define text rates
 const int section[6] = {0, 0, 370000, 990000, 1980000, 3720000};    //define rating section
 int main(){
-	int i, income, diffSection, tax, count = 1;
+	int i, income, diffSection, tax, count = 0;
 	printf("請輸入綜合所得淨額：");
 	scanf("%d", &income);
 	while(count == 0){
