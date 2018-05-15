@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-void score_handler(int classs, int score);
 void A_class(int score);
 void B_class(int score);
 int person_A = 0, person_B = 0;
@@ -22,17 +21,17 @@ int main(){
 			s[i][j] = score;
 		}
 	}
-	printf("                              ¥¿­×¬ì§Ş¤j¾Ç¸ê¤u¨t\n");
-	printf("                              ­pºâ¾÷µ{¦¡³]­p(¤G)\n");
+	printf("                              æ­£ä¿®ç§‘æŠ€å¤§å­¸è³‡å·¥ç³»\n");
+	printf("                              è¨ˆç®—æ©Ÿç¨‹å¼è¨­è¨ˆ(äºŒ)\n");
 	printf("               ------------------------------------------------\n");
-	printf("               ¯Z   ¯Å|­×½Ò|Á`¤À|Á`¥­§¡|  ¤Î   ®æ  | ¤£  ¤Î  ®æ\n");
-	printf("                      |¤H¼Æ|    |      |¤H¼Æ ¦Ê¤À¤ñ|¤H¼Æ ¦Ê¤À¤ñ\n");
+	printf("               ç­   ç´š|ä¿®èª²|ç¸½åˆ†|ç¸½å¹³å‡|  åŠ   æ ¼  | ä¸  åŠ  æ ¼\n");
+	printf("                      |äººæ•¸|    |      |äººæ•¸ ç™¾åˆ†æ¯”|äººæ•¸ ç™¾åˆ†æ¯”\n");
 	printf("               ================================================\n               ");
 	A_class(101); 
 	printf("\n               ------------------------------------------------\n               ");
 	B_class(101);
 	printf("\n               ------------------------------------------------\n");
-	printf("               ¦X   ­p|%4d|%4d|%6.2f|%3d, %5.1f%%|%3d, %5.1f%%\n", 
+	printf("               åˆ   è¨ˆ|%4d|%4d|%6.2f|%3d, %5.1f%%|%3d, %5.1f%%\n", 
 	person_A + person_B,
 	alls_B + alls_A, 
 	(float)(alls_B + alls_A) / (float)(person_A + person_B),
