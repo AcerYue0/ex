@@ -40,18 +40,14 @@ int main(){
 	printf("\n");                    
 	printf("numbers:%d\n", num);
 	printf("\n");
-	printf("A, C, e:%d\n", ABC);     
+	printf("A, C, e:%d\n", ace);     
 	printf("A, C, e in the string:");
 	for(i = 0; i < ace; i++){
 		printf("%2c", ACe[i]);
 	}
 	printf("\n");   
 	printf("punctuation:%d\n", com);
-	printf("\n");
-	printf("controls:%d\n", con); 
-	printf("\n");     
+	printf("controls:%d\n", con);
 	printf("others:%d\n", els);
-	printf("others:");
-	printf("\n");           
 	printf("total:%d\n", bit);          
 }
