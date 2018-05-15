@@ -1,25 +1,31 @@
-/*ex0605 ºî¦X©Ò±oµ|¸Õºâ
-40618128 §õ¬R¼y*/
+/*ex0605 ç¶œåˆæ‰€å¾—ç¨…è©¦ç®—
+40618128 ææ˜±æ…¶*/
 #include<stdio.h>
 
 const int adjust[6] = {0, 0, 25900, 105100, 283300, 655300};        //define adjustment for progressive tax rates
 const float rate[6] = {0, 0.06, 0.13, 0.21, 0.3, 0.4};              //define text rates
 const int section[6] = {0, 0, 370000, 990000, 1980000, 3720000};    //define rating section
 int main(){
-	int i, income, diffSection, tax;
-	printf("½Ğ¿é¤Jºî¦X©Ò±o²bÃB¡G");
+	int i, income, diffSection, tax, count = 0;
+	printf("è«‹è¼¸å…¥ç¶œåˆæ‰€å¾—æ·¨é¡ï¼š");
 	scanf("%d", &income);
-	for(i = 5; i >= 1; i--){       //in line 12~17
-		if(income > section[i]){   //detect which calculate section should be
-			diffSection = i;
-			break;
+	while(count == 0){
+		if(income > 0){
+			for(i = 5; i >= 1; i--){       //in line 14~22
+				if(income > section[i]){   //detect which calculate section should be
+					diffSection = i;
+					break;
+				}
+			}
+			count = 1;
 		}
+		else printf("è¼¸å…¥éŒ¯èª¤");
 	}
 	tax = (float)income * rate[diffSection];      //tax calculate
-	printf("\n  ºî¦X©Ò±o²bÃB¡G %d¤¸\n", income);
-	printf("  µ|        ÃB¡G %.2f%%\n", rate[diffSection]);
-	printf("  --------------------\n  µ|        ª÷¡G %d¤¸\n", tax);
-	printf("  ²Ö ¶i ®t  ÃB¡G %d¤¸\n", adjust[diffSection]);
-	printf("  --------------------\n  ¤µ¦~À³¯Çµ|ÃB¡G %d¤¸\n\n", tax - adjust[diffSection]);
+	printf("\n  ç¶œåˆæ‰€å¾—æ·¨é¡ï¼š %då…ƒ\n", income);
+	printf("  ç¨…        é¡ï¼š %.2f%%\n", rate[diffSection] * 100);
+	printf("  --------------------\n  ç¨…        é‡‘ï¼š %då…ƒ\n", tax);
+	printf("  ç´¯ é€² å·®  é¡ï¼š %då…ƒ\n", adjust[diffSection]);
+	printf("  --------------------\n  ä»Šå¹´æ‡‰ç´ç¨…é¡ï¼š %då…ƒ\n\n", tax - adjust[diffSection]);
 	system("pause");
 }
