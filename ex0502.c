@@ -3,17 +3,12 @@
 #include<time.h>
 
 int main(void){
-    int pc1, pc2;
+    int pc;
     char guess;
     srand(time(NULL));
-    pc1 = rand() % 2; //0~1 random
-    pc2 = rand() % 2; //0~1 random
-    int pc = pc1 + pc2; //0~2 final result
+    pc = (rand() % 3) + 97; //97~99 random
     printf("please input your choice --> ");
     scanf("%c", &guess); 
-    //a is for situation 0
-    //b is for situation 1
-    //c is for situation 2
     if(guess == 'a'){
         printf("your guess : 二只均為人像\n");
     }
@@ -23,16 +18,16 @@ int main(void){
     else{
         printf("your guess : 二指均為50元\n");
     }
-    if(pc == 0){
+    if(pc == 'a'){
         printf("pc         : 二只均為人像\n");
     }
-    else if(pc == 1){
+    else if(pc == 'b'){
         printf("pc         : 一只人像一只50元\n");
     }
     else{
         printf("pc         : 二指均為50元\n");
     }
-    if(pc + 97 == guess){
+    if(pc == guess){
         printf("right answer!\n");
     }
     else{
